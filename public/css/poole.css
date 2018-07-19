@@ -251,6 +251,14 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+td.green {
+  background: RGBA(53, 200, 73, 0.5) !important;
+}
+
+td.red {
+  background: RGBA(253, 96, 90, 0.5) !important;
+}
+
 
 /*
  * Custom type

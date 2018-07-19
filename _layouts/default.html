@@ -13,7 +13,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+            <!-- <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a> -->
             <small>{{ site.tagline }}</small>
           </h3>
         </div>
@@ -24,24 +24,22 @@
       </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+    <!-- navbar toggle button and js listener -->
+    <label id="sidebar-button" for="sidebar-checkbox" class="sidebar-toggle"></label>
     <script>
-      (function(document) {
+      (function (document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
           var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
+          if (sidebar.contains(target)) return;
+          if ((target === checkbox || target === toggle)) checkbox.checked = !checkbox.checked;
         }, false);
       })(document);
     </script>
+    
+    <!-- <script data-align="left" data-overlay="false" id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="#FF9800"
+      data-apps="JTdCJTIydGVsZWdyYW0lMjI6JTIyZnBnYWd1aWRlJTIyLCUyMmVtYWlsJTIyOiUyMmhlbGxvQGZwZ2EuZ3VpZGUlMjIlN0Q="></script> -->
   </body>
 </html>
